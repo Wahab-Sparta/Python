@@ -19,42 +19,42 @@ def grade_score(score):
     else:
         return "F"
 
-def test_grade_score_APlus():
+def test_grade_score_aplus():
     result_1 = grade_score(100)
     result_2 = grade_score(90)
     expected = "A+"
     assert result_1 == expected
     assert result_2 == expected
 
-def test_grade_score_A():
+def test_grade_score_a():
     result_1 = grade_score(89)
     result_2 = grade_score(80)
     expected = "A"
     assert result_1 == expected
     assert result_2 == expected
 
-def test_grade_score_B():
+def test_grade_score_b():
     result_1 = grade_score(79)
     result_2 = grade_score(70)
     expected = "B"
     assert result_1 == expected
     assert result_2 == expected
 
-def test_grade_score_C():
+def test_grade_score_c():
     result_1 = grade_score(69)
     result_2 = grade_score(60)
     expected = "C"
     assert result_1 == expected
     assert result_2 == expected
 
-def test_grade_score_D():
+def test_grade_score_d():
     result_1 = grade_score(59)
     result_2 = grade_score(50)
     expected = "D"
     assert result_1 == expected
     assert result_2 == expected
 
-def test_grade_score_F():
+def test_grade_score_f():
     result_1 = grade_score(40)
     result_2 = grade_score(0)
     expected = "F"

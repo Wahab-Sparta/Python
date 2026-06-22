@@ -6,7 +6,6 @@ def most_common_item(items : list):
     if not items:
         return "List is empty"
     count_dict = {}
-    count = 0
     for item in items:  #Puts all items in a dictionary where it has counted how many times an item appears in the list
         if item in count_dict:
             count_dict[item] = count_dict[item] + 1

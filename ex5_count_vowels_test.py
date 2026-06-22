@@ -30,4 +30,9 @@ def test_count_vowels_not_str():
     expected = "Invalid Input"
     assert result == expected
 
+def test_count_vowels_empty_str():
+    result = count_vowels("")
+    expected = 0
+    assert result == expected
+
 

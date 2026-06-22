@@ -9,6 +9,8 @@ def count_words(words : list[str]):
             count_dict[word] = count_dict[word] + 1
         else:
             count_dict[word] = 1
+    if not bool(count_dict):
+        return "Your list is empty"
     return count_dict
 
 def test_count_words():
@@ -18,7 +20,7 @@ def test_count_words():
 
 def test_count_words_empty_list():
     result = count_words([])
-    expected = {}
+    expected = "Your list is empty"
     assert result == expected
 
 def test_count_words_not_str():

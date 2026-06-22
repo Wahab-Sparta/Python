@@ -24,6 +24,16 @@ def test_calculate_discount_over_100():
     expected = "Invalid Input. Your discount is over 100%"
     assert result == expected
 
+def test_calculate_discount_price_0():
+    result = calculate_discount(0, 50)
+    expected = "Invalid Input. Your price or discount is 0 or below"
+    assert result == expected
+
+def test_calculate_discount_discount_0():
+    result = calculate_discount(100, 0)
+    expected = "Invalid Input. Your price or discount is 0 or below"
+    assert result == expected
+
 def test_calculate_discount_negative_num():
     result = calculate_discount(-100, 50)
     expected = "Invalid Input. Your price or discount is 0 or below"

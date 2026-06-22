@@ -1,5 +1,4 @@
 #Write a function filter_even_numbers that returns a list containing only the even numbers from a list.
-from asyncio.windows_events import NULL
 
 def filter_even_numbers(list_of_nums : list[int | float]):
     if not isinstance(list_of_nums, list):

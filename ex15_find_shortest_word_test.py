@@ -4,7 +4,7 @@ def find_shortest_word(list_of_words : list[str]):
     if not isinstance(list_of_words, list):
         return "Invalid Input"
     if not list_of_words:
-        return "There are no words"
+        return "There are no words in this list"
     if not isinstance(list_of_words[0], str):
         return "Invalid Input"
     shortest = list_of_words[0]
@@ -13,6 +13,8 @@ def find_shortest_word(list_of_words : list[str]):
             return "Invalid Input"
         if len(shortest) > len(word):
             shortest = word
+    if shortest == "":
+        return "There are no words in this list"
     return shortest
 
 def test_find_shortest_word():
@@ -42,5 +44,10 @@ def test_find_shortest_word_not_list():
 
 def test_find_shortest_word_empty_list():
     result = find_shortest_word([])
-    expected = "There are no words"
+    expected = "There are no words in this list"
+    assert result == expected
+
+def test_find_shortest_word_empty_str():
+    result = find_shortest_word(["","",""])
+    expected = "There are no words in this list"
     assert result == expected

@@ -17,20 +17,22 @@ def test_mask_email():
     expected = "t**********************"
     assert result == expected
 
-
 def test_is_email_1():
     result = mask_email("This isn't an email")
     expected = "Invalid Input"
     assert result == expected
-
 
 def test_is_email_2():
     result = mask_email("hello@hello@goodbye")
     expected = "Invalid Input"
     assert result == expected
 
-
 def test_mask_email_not_str():
     result = mask_email(0)
+    expected = "Invalid Input"
+    assert result == expected
+
+def test_mask_email_empty_str():
+    result = mask_email("")
     expected = "Invalid Input"
     assert result == expected

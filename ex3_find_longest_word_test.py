@@ -4,13 +4,15 @@ def find_longest_word(list_of_words : list[str]):
     if not isinstance(list_of_words, list):
         return "Invalid Input"
     if not list_of_words:
-        return "There are no words"
+        return "There are no words in this list"
     longest = ""
     for word in list_of_words:
         if not isinstance(word, str):
             return "Invalid Input"
         if len(longest) < len(word):
             longest = word
+    if longest == "":
+        return "There are no words in this list"
     return longest
 
 def test_find_longest_word():
@@ -40,5 +42,10 @@ def test_find_longest_word_not_list():
 
 def test_find_longest_word_empty_list():
     result = find_longest_word([])
-    expected = "There are no words"
+    expected = "There are no words in this list"
+    assert result == expected
+
+def test_find_longest_word_empty_str():
+    result = find_longest_word(["","",""])
+    expected = "There are no words in this list"
     assert result == expected
