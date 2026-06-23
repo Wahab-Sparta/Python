@@ -3,10 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
-      <excludeFolder url="file://$MODULE_DIR$/Python_TDD_Exercises/.venv" />
-      <excludeFolder url="file://$MODULE_DIR$/Python_Time/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.14 (Python_Repo) (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.14 (Python_TDD_Exercises)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
