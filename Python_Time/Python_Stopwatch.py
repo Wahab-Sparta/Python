@@ -7,18 +7,18 @@ def stopwatch():
     while not started:  #Will loop until the stopwatch has started
         start = input("Press Enter to start the Stopwatch. ")
         if start == "":
-            start_time = round(time.time(), 3)
-            date_and_time = time.ctime()
+            start_time = round(time.time(), 3)  #Gets the start time up to 3 dp
+            date_and_time = time.ctime()        #Gets the current date and time
             print("Started!")
-            started = True
+            started = True      #Stops the current loop
     while started:  #Will loop until the stopwatch has ended
         stop_or_lap = input("Press Enter once more to stop the Stopwatch\n Or type 'lap' to add a lap timer: ").lower()
-        if stop_or_lap == "lap":
-            lap_time = round(time.time() - start_time, 3)
+        if stop_or_lap == "lap":    #Lap timer
+            lap_time = round(time.time() - start_time, 3)   #Gets the  up to 3 dp
             print(lap_time)
-            lap_times["Lap "+str(lap_count)] = lap_time
+            lap_times["Lap "+str(lap_count)] = lap_time     #Puts the lap time into a dict
             lap_count += 1
-        elif stop_or_lap == "":
+        elif stop_or_lap == "":     #Ends stopwatch
             end_time = round(time.time(), 3)
             final = round(end_time - start_time,3)
             print("Finished!")
